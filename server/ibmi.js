@@ -32,6 +32,7 @@ function getPool() {
       user: config.user,
       password: config.password,
       naming: 'sql',
+      ...(config.library ? { libraries: config.library } : {}),
     });
   }
   return pool;
